@@ -92,4 +92,9 @@ export const getServerSideProps = async (context: any) => {
             }
         }
     }
+    return {
+        props: {
+            games: session
+        }
+    }
 }
