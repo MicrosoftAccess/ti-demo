@@ -22,21 +22,20 @@ export const cartSlice:any = createSlice({
             // }
             
             console.log(action.payload);
+            const i = state.products.findIndex((product:any)=>product==newProduct)
+            const i2 = state.products.indexOf(newProduct)
+            console.log(i);
             
-            
-            
-            const i = state.products.findIndex((product:any)=>product.id==newProduct.id)
-            // const i2 = state.products.indexOf()>-1
-            
-            let copy = state.products
-
-            if(i>=0){
-                
-                return null
+            if (i>=0){
+                return
             }
             state.products = [...state.products,newProduct]
             localStorage.setItem('cart',JSON.stringify(state.products.map((product:any)=>product)))
-            console.log(localStorage);
+            return
+            
+            
+
+            
             
             return
 

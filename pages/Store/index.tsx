@@ -44,7 +44,7 @@ export default function Store() {
 
             {cart.products.length != 0 ?
               cart.products.map((item: any) => (
-                <InCart key={item.id} item={item}></InCart>
+                <InCart key={item} item={item}></InCart>
               ))
               : <div className="text-black flex items-center justify-center h-full">
 
@@ -84,3 +84,9 @@ export const getServerSideProps = async (context: any) => {
       }
     }
   }
+  return {
+    props: {
+      data: '1'
+    }
+  }
+}

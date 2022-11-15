@@ -11,7 +11,6 @@ import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 
 
 export default function Home({ games }: any) {
-  const cart = useSelector((state: any) => state.cart.products)
 
   const products = games.results
   return (
@@ -41,8 +40,8 @@ export default function Home({ games }: any) {
 }
 export const getServerSideProps = async (context: any) => {
   const res = await fetch(' https://cs-steam-game-api.herokuapp.com/games?limit=50')
-  // const res = await fetch(' http://store.steampowered.com/api/appdetails?appids=10')
   const games = await res.json()
+  // const res = await fetch(' http://store.steampowered.com/api/appdetails?appids=10')
 
 
 
@@ -52,4 +51,5 @@ export const getServerSideProps = async (context: any) => {
     }
   }
 }
+
 // https://api.rawg.io/api/games?key=f073a56242394b98bcadbf57165d2eb7&dates=2019-09-01,2019-09-30&platforms=18,1,7

@@ -90,19 +90,6 @@ export default function index({ game, review }: any) {
             </div>
 
             <div className=" w-3/5 flex flex-col  gap-4">
-              {/* <div className=" items-center w-2/4 h-1/5 ml-5 rounded-xl text-xl flex flex-col gap-2  bg-gradient-to-r from-violet-500 via-purple-700 to-violet-500 background-animate">
-
-                <div className="flex w-full text-white h-5 justify-center ">
-                  <h3 className="">Categorías</h3>
-                </div>
-
-                <div className="bg-indigo-500 h-0.5 rounded-xl  w-11/12"></div>
-                <div className="flex flex-row flex-wrap justify-center gap-4">
-                  {game.data.gender.map((gender: string, index: number) => {
-                    return <Pill key={index} text={gender} />
-                  })} 
-                </div>
-              </div> */}
               <div className="ml-5 rounded-xl bg-white w-2/4 h-full">
                 <div className="w-full text-black text-xl h-full flex items-center justify-center gap-2 flex-col">
                   <div className="flex h-1/5  w-full items-center justify-center">
